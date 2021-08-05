@@ -335,7 +335,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
             if ask_.text and (ask_.text.startswith("/") is False):
                 if len(ask_.text) > 1024:
                     await ask_.reply_text(
-                        "**Caption Text Length Is More Than 1024 Bytes , Send Below 1024 Bytes*"",
+                        "**Caption Text Length Is More Than 1024 Bytes , Send Below 1024 Bytes*""
                         quote=True,
                         reply_markup=InlineKeyboardMarkup(
                             [
