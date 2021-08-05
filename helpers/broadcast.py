@@ -14,7 +14,7 @@ from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, Peer
 
 broadcast_ids = {}
 
-
+@RenameBot.on_message(filters.private & filters.command("broadcast"))
 async def send_msg(user_id, message):
     try:
         if Config.BROADCAST_AS_COPY is False:
