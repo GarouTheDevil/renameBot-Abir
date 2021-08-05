@@ -11,11 +11,10 @@ from configs import Config
 from helpers.database.access_db import db
 from pyrogram.types import Message
 from pyrogram.errors import FloodWait, InputUserDeactivated, UserIsBlocked, PeerIdInvalid
-ADMIN = int(os.environ.get("ADMIN", 1016768333))
 
 broadcast_ids = {}
 
-@RenameBot.on_message(filters.private & filters.user(ADMIN) & filters.command(["broadcast"]))
+@RenameBot.on_message(filters.private & filters.command(["broadcast"]))
 async def send_msg(user_id, message):
     try:
         if Config.BROADCAST_AS_COPY is False:
