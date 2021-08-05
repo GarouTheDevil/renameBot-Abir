@@ -149,7 +149,7 @@ async def rename_handler(bot: Client, event: Message):
                     except:
                         print(f"**Unable To Download File For** `{str(event.from_user.id)}` \n**Error :** `{err}`")
             elif ask_.text and (ask_.text.startswith("/") is True):
-                await reply_.edit("Current Process Cancelled!")
+                await reply_.edit("**Current Process Cancelled**")
         except TimeoutError:
             await reply_.edit("**Time Out Send File Again To Rename**")
 
@@ -248,12 +248,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await SetupPrefix(ask_.text, user_id=cb.from_user.id, editable=cb.message)
             elif ask_.text and (ask_.text.startswith("/") is True):
                 await cb.message.edit(
-                    text="Current Process Cancelled",
+                    text="**Current Process Cancelled**",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="openSettings")]])
                 )
         except TimeoutError:
             await cb.message.edit(
-                text="Time Out Send File Again To Rename",
+                text="**Time Out Send File Again To Rename**",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="openSettings")]])
             )
     elif "triggerPrefix" in cb.data:
@@ -270,12 +270,12 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                     await SetupPrefix(ask_.text, user_id=cb.from_user.id, editable=cb.message)
                 elif ask_.text and (ask_.text.startswith("/") is True):
                     await cb.message.edit(
-                        text="Current Process Cancelled",
+                        text="**Current Process Cancelled**",
                         reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="openSettings")]])
                     )
             except TimeoutError:
                 await cb.message.edit(
-                    text="Time Out Send File Again To Rename",
+                    text="**Time Out Send File Again To Rename**",
                     reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="openSettings")]])
                 )
         else:
@@ -349,7 +349,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await ask_.delete(True)
                 await db.set_caption(cb.from_user.id, caption=caption)
                 await cb.message.edit(
-                    "Custom Caption Removed Successfully",
+                    "**Custom Caption Removed Successfully**",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("Settings", callback_data="openSettings")],
                         [InlineKeyboardButton("CLOSE", callback_data="closeMeh")]
@@ -357,13 +357,13 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 )
             elif ask_.text and (ask_.text.startswith("/") is True):
                 await cb.message.edit(
-                    text="Current Process Cancelled",
+                    text="**Current Process Cancelled**",
                     reply_markup=InlineKeyboardMarkup(
                         [[InlineKeyboardButton("Settings", callback_data="openSettings")]])
                 )
         except TimeoutError:
             await cb.message.edit(
-                text="Time Out Send File Again To Rename",
+                text="**Time Out Send File Again To Rename**",
                 reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Settings", callback_data="openSettings")]])
             )
 
