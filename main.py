@@ -173,7 +173,7 @@ async def delete_thumb_handler(bot: Client, event: Message):
         return
     await db.set_thumbnail(event.from_user.id, thumbnail=None)
     await event.reply_text(
-        "**Custom Thumbnail Deleted Successfully**",
+        "Custom Thumbnail Deleted Successfully",
         reply_markup=InlineKeyboardMarkup([
             [InlineKeyboardButton("Settings", callback_data="openSettings")],
             [InlineKeyboardButton("CLOSE", callback_data="closeMeh")]
@@ -349,7 +349,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await ask_.delete(True)
                 await db.set_caption(cb.from_user.id, caption=caption)
                 await cb.message.edit(
-                    "**Custom Caption Removed Successfully**",
+                    "Custom Caption Removed Successfully",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("Settings", callback_data="openSettings")],
                         [InlineKeyboardButton("CLOSE", callback_data="closeMeh")]
