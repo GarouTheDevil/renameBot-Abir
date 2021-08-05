@@ -239,7 +239,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         await OpenSettings(cb.message, user_id=cb.from_user.id)
     elif "forceNewPrefix" in cb.data:
         await cb.message.edit(
-            text="Send New File Name Prefix"
+            text="**Send New File Name Prefix**"
         )
         try:
             ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
@@ -261,7 +261,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         if current_prefix is None:
             await cb.answer("Currently You Didn't Set Any File Name Prefix", show_alert=True)
             await cb.message.edit(
-                text="Send A File Name Prefix"
+                text="**Send A File Name Prefix**"
             )
             try:
                 ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
@@ -328,7 +328,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
         elif custom_caption_ is None:
             await cb.answer("Currently You Didn't Set Any File Caption", show_alert=True)
         await cb.message.edit(
-            text="Send A File Caption"
+            text="**Send A File Caption**"
         )
         try:
             ask_: Message = await bot.listen(cb.message.chat.id, timeout=300)
