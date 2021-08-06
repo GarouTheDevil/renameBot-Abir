@@ -12,7 +12,7 @@ class Config(object):
     BOT_OWNER = os.environ.get("BOT_OWNER", ""))
     CAPTION = "**© @TheRename_Robot**"
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "David_Botz"))
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "")
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
     MONGODB_URI = os.environ.get("MONGODB_URI", ""))
     DOWNLOAD_PATH = os.environ.get("DOWNLOAD_PATH", "./downloads"))
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
