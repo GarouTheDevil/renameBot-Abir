@@ -13,7 +13,7 @@ class Config(object):
     CAPTION = "**© @TheRename_Robot**"
     UPDATES_CHANNEL = os.environ.get("UPDATES_CHANNEL", "David_Botz")
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", -100))
-    MONGODB_URI = os.environ.get("MONGODB_URI", "")
+    MONGODB_URI = os.environ.get("MONGODB_URI", "mongodb+srv://David12345:David12345@cluster0.ol6px.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
     DOWNLOAD_PATH = os.environ.get("DOWNLOAD_PATH", "./downloads")
     BROADCAST_AS_COPY = bool(os.environ.get("BROADCAST_AS_COPY", False))
     ONE_PROCESS_ONLY = bool(os.environ.get("ONE_PROCESS_ONLY", False))
