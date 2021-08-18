@@ -222,7 +222,7 @@ async def delete_caption(bot: Client, event: Message):
     if FSub == 400:
         return
     await db.set_caption(event.from_user.id, caption=None)
-    await event.reply_text("Custom Caption Removed Successfully")
+    await event.reply_text("**✓ Custom Caption Removed Successfully**")
 
 
 @RenameBot.on_message(filters.private & filters.command("broadcast") & filters.user(Config.BOT_OWNER) & filters.reply)
@@ -383,7 +383,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await ask_.delete(True)
                 await db.set_caption(cb.from_user.id, caption=caption)
                 await cb.message.edit(
-                    "Custom Caption Removed Successfully",
+                    "Custom Caption Added Succesfully",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("Settings", callback_data="openSettings")],
                         [InlineKeyboardButton("CLOSE", callback_data="closeMeh")]
