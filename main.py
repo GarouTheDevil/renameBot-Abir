@@ -212,7 +212,7 @@ async def show_thumb_handler(bot: Client, event: Message):
             except:
                 pass
     else:
-        await event.reply_text("No Thumbnail Found in Database!\nSend a Thumbnail to Save.", quote=True)
+        await event.reply_text("**No Thumbnail Found**", quote=True)
 
 
 @RenameBot.on_message(filters.private & filters.command(["delete_caption", "del_caption", "remove_caption", "rm_caption"]) & ~filters.edited)
