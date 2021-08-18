@@ -383,7 +383,7 @@ async def callback_handlers(bot: Client, cb: CallbackQuery):
                 await ask_.delete(True)
                 await db.set_caption(cb.from_user.id, caption=caption)
                 await cb.message.edit(
-                    "Custom Caption Added Succesfully",
+                    "**Custom Caption Added Succesfully**",
                     reply_markup=InlineKeyboardMarkup([
                         [InlineKeyboardButton("Settings", callback_data="openSettings")],
                         [InlineKeyboardButton("CLOSE", callback_data="closeMeh")]
